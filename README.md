@@ -1,6 +1,6 @@
 # RlmRuby
 
-TODO: Write a gem description
+A simple unofficial ruby wrapper for [Reprise License Manager](http://www.reprisesoftware.com/index.php]) (RLM).
 
 ## Installation
 
@@ -18,7 +18,12 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Generate a new activation key:
+```ruby
+RlmRuby::ActivationKey.new(akey: "0280-5283-5409-6035", contact: "Stan Still", company: "Acme Corp")
+```
+
+
 
 ## Contributing
 
