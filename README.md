@@ -18,13 +18,13 @@ Or install it yourself as:
 
 ## Usage
 
-Generate a new activation key for user "Stan Still" for three products with their respective usage counts:
+Generate new activation keys for user "Stan Still" for three products with 100, 30, and 1 uses repectively:
 ```ruby
 RlmRuby::License.create(contact: { name: "Stan Still",
                                   email: "stans@example.com",
                                   phone: "012-345-6789" },
                        products: [{ id: 1, count: 100 },
-                                  { id: 2, count:30 },
+                                  { id: 2, count: 30 },
                                   { id: 3, count: 1 }])
 #=> [<#= RlmRuby::ActivationKey #>, <#= RlmRuby::ActivationKey #>, <#= RlmRuby::ActivationKey #>]
 ```
