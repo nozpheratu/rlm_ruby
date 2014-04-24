@@ -21,7 +21,7 @@ Or install it yourself as:
 Generate a new activation key:
 ```ruby
 RlmRuby::License.create contact: {name: "Stan Still", email: "stans@example.com", phone: "012-345-6789"},
-												products: { "1" => 30, "2" => 100, "3" => 1 }
+                        products: { "1" => 30, "2" => 100, "3" => 1 }
 ```
 
 ## Contributing
