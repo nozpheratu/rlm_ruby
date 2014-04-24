@@ -1,5 +1,5 @@
 require "rlm_ruby/version"
-require "rlm_ruby/activation_key"
+require "rlm_ruby/license"
 require "rlm_ruby/configuration"
 
 begin
