@@ -1,6 +1,6 @@
 require "rlm_ruby/version"
-require "active_record"
-# require 'mysql2'
+require "rlm_ruby/activation_key"
+require "rlm_ruby/configuration"
 
 begin
 	require "pry"
@@ -8,4 +8,11 @@ begin
 end
 
 module RlmRuby
+
+	def self.configure
+
+	end
+
+
 end
+
