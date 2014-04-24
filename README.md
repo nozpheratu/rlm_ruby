@@ -26,7 +26,7 @@ RlmRuby::License.create(contact: { name: "Stan Still",
                        products: [{ id: 1, count: 100 },
                                   { id: 2, count:30 },
                                   { id: 3, count: 1 }])
- => [<#= RlmRuby::ActivationKey #>, <#= RlmRuby::ActivationKey #>, <#= RlmRuby::ActivationKey #>]
+#=> [<#= RlmRuby::ActivationKey #>, <#= RlmRuby::ActivationKey #>, <#= RlmRuby::ActivationKey #>]
 ```
 
 ## Contributing
