@@ -24,7 +24,6 @@ module RlmRuby
         }
       }.to_json
       response = Net::HTTP.new(RlmRuby.configuration.host, RlmRuby.configuration.port).start {|http| http.request(req) }
-      puts "Response #{response.code} #{response.message}: #{response.body}"
     end
 
   end
