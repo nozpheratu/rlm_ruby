@@ -23,7 +23,7 @@ module RlmRuby
           products: products
         }
       }.to_json
-      response = Net::HTTP.new(RlmRuby.configuration.host, RlmRuby.configuration.port).start {|http| http.request(req) }
+      Net::HTTP.new(RlmRuby.configuration.host, RlmRuby.configuration.port).start {|http| http.request(req) }
     end
 
   end
