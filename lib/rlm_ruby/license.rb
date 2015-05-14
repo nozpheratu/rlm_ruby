@@ -5,7 +5,8 @@ module RlmRuby
   class License
 
     def self.generate_keys(contact = {}, products = [])
-      req = Net::HTTP::Post.new(RlmRuby.configuration.uri, initheader = {'Content-Type' =>'application/json'})
+      uri = URI(RlmRuby.configuration.uri)
+      req = Net::HTTP::Post.new(uri, {'Content-Type' => 'application/json'})
       req.basic_auth RlmRuby.configuration.username, RlmRuby.configuration.password
       req.body = {
         header:{
@@ -16,14 +17,12 @@ module RlmRuby
         data:
         {
           contact: contact[:name],
-          contact_notes: "via Cogmation Storefront on #{Time.now.strftime('%m/%d/%Y')}",
           phone: contact[:phone],
           email: contact[:email],
-          notes: "via Cogmation Storefront on #{Time.now.strftime('%m/%d/%Y')}",
           products: products
         }
       }.to_json
-      Net::HTTP.new(RlmRuby.configuration.host, RlmRuby.configuration.port).start {|http| http.request(req) }
+      Net::HTTP.new(RlmRuby.configuration.host).start {|http| http.request(req) }
     end
 
   end
